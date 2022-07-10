@@ -129,10 +129,10 @@ Queries `artists`, `genres`, `tracks`, `bands` and `albums` has pagination param
 - `updateAlbum` update album by id.
 - `registerUser` register user.
 - `addTrackToFavourites` add track to favourites.
-- `addBandToFavourites` add `band` to favourites.
-- `addArtistToFavourites` add `artist` to favourites.
-- `addGenreToFavourites` add `genre` to  favourites.
+- `addBandToFavourites` add band to favourites.
+- `addArtistToFavourites` add artist to favourites.
+- `addGenreToFavourites` add genre to  favourites.
 - `deleteTrackFromFavourites` delete track from favourites.
 - `deleteBandFromFavourites` delete band from favourites. 
-- `deleteArtistFromFavourites` delete `artist` from favourites.
-- `deleteGenreFromFavourites` delete `genre` from favourites.
+- `deleteArtistFromFavourites` delete artist from favourites.
+- `deleteGenreFromFavourites` delete genre from favourites.
