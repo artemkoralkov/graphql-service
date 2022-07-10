@@ -17,8 +17,8 @@ export default class GenresAPI extends RESTDataSource {
     }
   }
 
-  async getGenres() {
-    const response = await this.get("");
+  async getGenres(limit: number = 0, offset: number = 0) {
+    const response = await this.get("", { limit, offset });
     return response.items;
   }
 

@@ -3,8 +3,11 @@ const genresResolver = {
     genre: (_: any, { id }: { id: string }, { dataSources }: any) =>
       dataSources.genresAPI.getGenre(id),
 
-    genres: (_: any, __: any, { dataSources }: any) =>
-      dataSources.genresAPI.getGenres(),
+    genres: (
+      _: any,
+      { limits, offset }: { limits: number; offset: number },
+      { dataSources }: any
+    ) => dataSources.genresAPI.getGenres(limits, offset),
   },
   Mutation: {
     createGenre: (_: any, { newGenre }: any, { dataSources }: any) =>
