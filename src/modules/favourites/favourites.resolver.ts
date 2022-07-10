@@ -29,6 +29,30 @@ const favouritesResolver = {
       { userId, genreId }: { userId: string; genreId: string },
       { dataSources }: any
     ) => dataSources.favouritesAPI.addGenreToFavourites(userId, genreId),
+
+    deleteArtistFromFavourites: (
+      _: any,
+      { userId, artistId }: { userId: string; artistId: string },
+      { dataSources }: any
+    ) => dataSources.favouritesAPI.deleteArtistFromFavourites(userId, artistId),
+
+    deleteBandFromFavourites: (
+      _: any,
+      { userId, bandId }: { userId: string; bandId: string },
+      { dataSources }: any
+    ) => dataSources.favouritesAPI.deleteBandFromFavourites(userId, bandId),
+
+    deleteTrackFromFavourites: (
+      _: any,
+      { userId, trackId }: { userId: string; trackId: string },
+      { dataSources }: any
+    ) => dataSources.favouritesAPI.deleteTrackFromFavourites(userId, trackId),
+
+    deleteGenreFromFavourites: (
+      _: any,
+      { userId, genreId }: { userId: string; genreId: string },
+      { dataSources }: any
+    ) => dataSources.favouritesAPI.deleteGenreFromFavourites(userId, genreId),
   },
   Favourites: {
     id: (parent: any) => parent._id,

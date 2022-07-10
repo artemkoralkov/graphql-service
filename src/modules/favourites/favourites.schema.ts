@@ -18,5 +18,9 @@ export default gql`
     addBandToFavourites(userId: ID!, bandId: ID!): Favourites
     addArtistToFavourites(userId: ID!, artistId: ID!): Favourites
     addGenreToFavourites(userId: ID!, genreId: ID!): Favourites
+    deleteTrackFromFavourites(userId: ID!, trackId: ID!): Favourites
+    deleteBandFromFavourites(userId: ID!, bandId: ID!): Favourites
+    deleteArtistFromFavourites(userId: ID!, artistId: ID!): Favourites
+    deleteGenreFromFavourites(userId: ID!, genreId: ID!): Favourites
   }
 `;
