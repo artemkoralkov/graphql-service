@@ -3,8 +3,11 @@ const tracksResolver = {
     track: (_: any, { id }: { id: string }, { dataSources }: any) =>
       dataSources.tracksAPI.getTrack(id),
 
-    tracks: (_: any, __: any, { dataSources }: any) =>
-      dataSources.tracksAPI.getTracks(),
+    tracks: (
+      _: any,
+      { limit, offset }: { limit: number; offset: number },
+      { dataSources }: any
+    ) => dataSources.tracksAPI.getTracks(limit, offset),
   },
   Mutation: {
     createTrack: (_: any, { newTrack }: any, { dataSources }: any) =>

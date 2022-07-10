@@ -31,7 +31,7 @@ export default gql`
 
   type Query {
     track(id: ID!): Track
-    tracks: [Track]!
+    tracks(limit: Int, offset: Int): [Track]!
   }
 
   type Mutation {
