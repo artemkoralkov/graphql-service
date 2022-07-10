@@ -3,8 +3,11 @@ const artistsResolver = {
     artist: (_: any, { id }: { id: string }, { dataSources }: any) =>
       dataSources.artistsAPI.getArtist(id),
 
-    artists: (_: any, __: any, { dataSources }: any) =>
-      dataSources.artistsAPI.getArtists(),
+    artists: (
+      _: any,
+      { limit, offset }: { limit: number; offset: number },
+      { dataSources }: any
+    ) => dataSources.artistsAPI.getArtists(limit, offset),
   },
   Mutation: {
     createArtist: (_: any, { newArtist }: any, { dataSources }: any) =>

@@ -15,7 +15,7 @@ export default gql`
 
   type Query {
     artist(id: ID!): Artist
-    artists: [Artist]
+    artists(limit: Int, offset: Int): [Artist]
   }
   input CreateArtistInput {
     firstName: String!

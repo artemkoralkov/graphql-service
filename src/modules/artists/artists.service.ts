@@ -14,8 +14,8 @@ export default class ArtistsAPI extends RESTDataSource {
     return await this.get(`/${id}`);
   }
 
-  async getArtists() {
-    const response = await this.get("/");
+  async getArtists(limit: number = 0, offset: number = 0) {
+    const response = await this.get("", { limit, offset });
     return response.items;
   }
 
