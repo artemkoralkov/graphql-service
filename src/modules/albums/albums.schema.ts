@@ -39,6 +39,6 @@ export default gql`
 
   type Query {
     album(id: ID!): Album
-    albums: [Album]
+    albums(limit: Int, offset: Int): [Album]
   }
 `;

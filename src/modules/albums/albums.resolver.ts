@@ -3,8 +3,11 @@ const albumsResolver = {
     album: (_: any, { id }: { id: string }, { dataSources }: any) =>
       dataSources.albumsAPI.getAlbum(id),
 
-    albums: (_: any, __: any, { dataSources }: any) =>
-      dataSources.albumsAPI.getAlbums(),
+    albums: (
+      _: any,
+      { limit, offset }: { limit: number; offset: number },
+      { dataSources }: any
+    ) => dataSources.albumsAPI.getAlbums(limit, offset),
   },
   Mutation: {
     createAlbum: (_: any, { newAlbum }: any, { dataSources }: any) =>
