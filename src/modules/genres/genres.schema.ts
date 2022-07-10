@@ -18,7 +18,7 @@ export default gql`
 
   type Query {
     genre(id: ID!): Genre
-    genres(limits: Int, offset: Int): [Genre]
+    genres(limit: Int, offset: Int): [Genre]
   }
   input UpdateGenreInput {
     name: String

@@ -5,9 +5,9 @@ const genresResolver = {
 
     genres: (
       _: any,
-      { limits, offset }: { limits: number; offset: number },
+      { limit, offset }: { limit: number; offset: number },
       { dataSources }: any
-    ) => dataSources.genresAPI.getGenres(limits, offset),
+    ) => dataSources.genresAPI.getGenres(limit, offset),
   },
   Mutation: {
     createGenre: (_: any, { newGenre }: any, { dataSources }: any) =>
